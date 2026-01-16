@@ -1,0 +1,85 @@
+.header {
+  padding: 24px 32px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.filters {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.filters input,
+.filters select {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  font-size: 14px;
+}
+
+.filters input {
+  min-width: 280px; /* FIX #3 */
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px; /* FIX #1 */
+}
+
+.card {
+  background: var(--card);
+  padding: 20px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px); /* FIX #2 */
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.badge {
+  display: inline-block;
+  margin: 8px 0;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+.badge.published {
+  background: #dcfce7;
+}
+
+.badge.submitted {
+  background: #e0f2fe;
+}
+
+.badge.draft {
+  background: #fef3c7;
+}
+
+.empty {
+  color: var(--muted); /* FIX #4 */
+}
+
+.detail .back {
+  margin-bottom: 16px;
+}
+
+.disclaimer {
+  background: #fef2f2;
+  padding: 12px;
+  border-radius: 8px;
+  margin: 16px 0;
+}
+
+.summary,
+.versions {
+  padding-left: 16px;
+}
